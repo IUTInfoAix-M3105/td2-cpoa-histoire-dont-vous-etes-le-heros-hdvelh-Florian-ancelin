@@ -17,35 +17,35 @@ public class NodeMultiple {
 	public static int NODE_MAX_ARITY = 10;
 
 	/* Overridden methods */
-	@Override
-	public String toString() {
-		/* TO BE COMPLETED */
-	}
+//	@Override
+//	public String toString() {
+//		/* TO BE COMPLETED */
+//	}
 
 	/* Getters/Setters */
 	/**
 	 * Gets the {@code i}th daughter node.
-	 * 
+	 *
 	 * Aborts if the given index {@code i} is out of range.
-	 * 
+	 *
 	 * @param i the index of the daughter node.
 	 * @return the {@code i}th daughter node, or {@code null} if it does not exist.
 	 */
-	public NodeMultiple getDaughter(int i) {
-		/* TO BE COMPLETED */
-	}
+//	public NodeMultiple getDaughter(int i) {
+//		/* TO BE COMPLETED */
+//	}
 
 	/**
 	 * Sets the {@code i}th daughter node to the input parameter {@code daughter}.
 	 * Should be used cautiously, since {@code i} may not be the first index
 	 * available (i.e. there may be lower indexes which do not refer to any
 	 * daughter).
-	 * 
+	 *
 	 * If a daughter node is already referred to at this index then it is erased
 	 * with {@code daughter}.
-	 * 
+	 *
 	 * Aborts if the index {@code i} is out of range.
-	 * 
+	 *
 	 * @param daughter the node to be linked as a daughter of {@code this} node.
 	 * @param i        the daughter node's index
 	 */
@@ -56,9 +56,9 @@ public class NodeMultiple {
 	/**
 	 * @return all the daughters
 	 */
-	public NodeMultiple[] getDaughters() {
-		/* TO BE COMPLETED */
-	}
+//	public NodeMultiple[] getDaughters() {
+//		/* TO BE COMPLETED */
+//	}
 
 	/**
 	 * @param daughters the daughters to set
@@ -69,10 +69,10 @@ public class NodeMultiple {
 
 	/**
 	 * Adds the given {@code daughter} node at the first available index.
-	 * 
+	 * <p>
 	 * If the max number of daughters ({@link #NODE_MAX_ARITY}) is already reached
 	 * nothing happens (no abort).
-	 * 
+	 *
 	 * @param daughter
 	 */
 	public void addDaughter(NodeMultiple daughter) {
@@ -82,9 +82,9 @@ public class NodeMultiple {
 	/**
 	 * @return the content data
 	 */
-	public Object getData() {
-		/* TO BE COMPLETED */
-	}
+//	public Object getData() {
+//		/* TO BE COMPLETED */
+//	}
 
 	/**
 	 * @param data
@@ -97,11 +97,12 @@ public class NodeMultiple {
 	 * @return {@code true} if and only if this node has at least one non-null
 	 *         daughter node.
 	 */
-	public boolean hasDaughters() {
-		/* TO BE COMPLETED */
-	}
+//	public boolean hasDaughters() {
+//		/* TO BE COMPLETED */
+//	}
 
 	/* Constructors */
+
 	/**
 	 * Default constructor.
 	 */
@@ -112,11 +113,12 @@ public class NodeMultiple {
 	/**
 	 * Constructor. Sets the content data to {@code data} and creates an empty set
 	 * of daughters.
-	 * 
+	 *
 	 * @param data
 	 */
-	public NodeMultiple(Object data) {
-		/* TO BE COMPLETED */
+//	public NodeMultiple(Object data) {
+//		/* TO BE COMPLETED */
+//	}
+//
 }
-
 // eof

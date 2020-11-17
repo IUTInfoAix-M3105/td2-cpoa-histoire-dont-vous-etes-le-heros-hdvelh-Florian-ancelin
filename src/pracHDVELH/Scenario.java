@@ -16,7 +16,14 @@ public class Scenario {
 	private GUIManager gui;
 
 	/* TO BE COMPLETED */
+	public Scenario(GUIManager gui2,Event StE){
+		this.gui =gui2;
+		this.head = StE;
+	}
 
+	public String run(){
+		return "coucou";
+	}
 	/* MAIN */
 	public static void main(String[] args) {
 		Scenario scenario;
@@ -52,11 +59,11 @@ public class Scenario {
 		// ***E
 		// ***event3
 
-		Event event3 = new EventExactSolution(gui, "Wizard: how much is worth pi?", "3.14159");
-		event2.setData(event2.getData() + " (3)2.3");
-		event2.addDaughter(event3);
-		event3.addDaughter(endEvent);
-		event3.addDaughter(event3);
+//		Event event3 = new EventExactSolution(gui, "Wizard: how much is worth pi?", "3.14159");
+//		event2.setData(event2.getData() + " (3)2.3");
+//		event2.addDaughter(event3);
+//		event3.addDaughter(endEvent);
+//		event3.addDaughter(event3);
 
 		/* ******* */
 		// **2.3
@@ -67,12 +74,12 @@ public class Scenario {
 		// ...
 
 		int[] mask = { 3, 6, 7 };
-		Event event4 = new EventRandomSolution(gui, "Random choice of the next event...", mask, "Dice rolling... Roll=",
-				"\nNext event is ");
-		event3.setDaughter(event4, 0);
-		event4.addDaughter(event2);
-		event4.addDaughter(endEvent);
-		event4.addDaughter(event3);
+//		Event event4 = new EventRandomSolution(gui, "Random choice of the next event...", mask, "Dice rolling... Roll=",
+//				"\nNext event is ");
+//		event3.setDaughter(event4, 0);
+//		event4.addDaughter(event2);
+//		event4.addDaughter(endEvent);
+//		event4.addDaughter(event3);
 
 		System.out.println(scenario.run());
 	}
