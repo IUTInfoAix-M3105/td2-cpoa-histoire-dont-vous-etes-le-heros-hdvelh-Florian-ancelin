@@ -17,10 +17,13 @@ public class Event extends NodeMultiple {
 	public static final String ERROR_MSG_UNEXPECTED_END = "Sorry, for some unexpected reason the story ends here...";
 	public static final String PROMPT_ANSWER = "Answer: ";
 	public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
+	private String str;
+	private GUIManager gui;
 
 
 	public Event(GUIManager gui, String str) {
-
+		this.str = str;
+		this.gui = gui;
 	}
 //	/**
 //	 * @return the playerAnswer
@@ -35,6 +38,15 @@ public class Event extends NodeMultiple {
 	public void setPlayerAnswer(String playerAnswer) {
 		/* TO BE COMPLETED */
 	}
+
+	public Event run(){
+		gui.output(getData());
+		int i = gui.getAnswer()-1;
+
+		if(i > NODE_MAX_ARITY)return null;
+			return getDaughter(i);
+	}
+
 
 //	/**
 //	 * @return the reader
@@ -68,34 +80,34 @@ public class Event extends NodeMultiple {
 //	/**
 //	 * @see pracHDVELH.NodeMultiple#getData()
 //	 */
-//	public String getData() {
-//		/* TO BE COMPLETED */
-//	}
+	public String getData() {
+		return this.str;
+	}
 
 	/**
 	 * @see pracHDVELH.NodeMultiple#setData(Object)
 	 * @param data
 	 */
-	public void setData(String data) {
-		/* TO BE COMPLETED */
-	}
+	public void setData(String data) { this.str = data;	}
 
 //	/**
 //	 * @see pracHDVELH.NodeMultiple#getDaughter(int)
 //	 */
-//	@Override
-//	public Event getDaughter(int i) {
-//		/* TO BE COMPLETED */
-//	}
+
+	@Override
+	public Event getDaughter(int i) {
+	return (Event) super.getDaughter(i);
+}
 
 //	/**
 //	 * @see pracHDVELH.NodeMultiple#setDaughter(NodeMultiple, int)
 //	 * @param daughter
 //	 * @param i
 //	 */
-//	public void setDaughter(Event daughter, int i) {
-//		/* TO BE COMPLETED */
-//	}
+
+	public void setDaughter(Event daughter, int i) {
+	super.setDaughter(daughter,i);
+}
 
 //	/**
 //	 * @return the gui
@@ -107,9 +119,7 @@ public class Event extends NodeMultiple {
 	/**
 	 * @param gui the gui to set
 	 */
-	public void setGui(GUIManager gui) {
-		/* TO BE COMPLETED */
-	}
+	public void setGui(GUIManager gui) { this.gui = gui; }
 
 //	/**
 //	 * @return the id

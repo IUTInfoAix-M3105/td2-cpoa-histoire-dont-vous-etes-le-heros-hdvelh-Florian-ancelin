@@ -65,6 +65,11 @@ public class GUIManager {
 	this.err = err;
 	inputReader = new Scanner(this.in);
   }
+
+  public int getAnswer(){
+        return inputReader.nextInt();
+    }
 }
+
 
 // eof

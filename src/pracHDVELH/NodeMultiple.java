@@ -16,6 +16,10 @@ public class NodeMultiple {
 	public static final String ERROR_MSG_INDEX_OUT_OF_RANGE = "Index out of range";
 	public static int NODE_MAX_ARITY = 10;
 
+	private NodeMultiple[] daughters = new NodeMultiple[NODE_MAX_ARITY];
+
+	private Object data;
+
 	/* Overridden methods */
 //	@Override
 //	public String toString() {
@@ -49,16 +53,12 @@ public class NodeMultiple {
 	 * @param daughter the node to be linked as a daughter of {@code this} node.
 	 * @param i        the daughter node's index
 	 */
-	public void setDaughter(NodeMultiple daughter, int i) {
-		/* TO BE COMPLETED */
-	}
+	public void setDaughter(NodeMultiple daughter, int i) { daughters[i-1] = daughter;}
 
 	/**
 	 * @return all the daughters
 	 */
-//	public NodeMultiple[] getDaughters() {
-//		/* TO BE COMPLETED */
-//	}
+	public NodeMultiple getDaughter(int i) { return this.daughters[i]; }
 
 	/**
 	 * @param daughters the daughters to set
@@ -82,9 +82,9 @@ public class NodeMultiple {
 	/**
 	 * @return the content data
 	 */
-//	public Object getData() {
-//		/* TO BE COMPLETED */
-//	}
+	public Object getData() {
+		return data;
+	}
 
 	/**
 	 * @param data
@@ -97,9 +97,9 @@ public class NodeMultiple {
 	 * @return {@code true} if and only if this node has at least one non-null
 	 *         daughter node.
 	 */
-//	public boolean hasDaughters() {
-//		/* TO BE COMPLETED */
-//	}
+	public boolean hasDaughters() {
+		return true;
+	}
 
 	/* Constructors */
 
